@@ -1,13 +1,47 @@
+/*
+ * Copyright 2021 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package com.example.androiddevchallenge
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.compose.foundation.*
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.Canvas
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.offset
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.*
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.Button
+import androidx.compose.material.ButtonDefaults
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Surface
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -27,12 +61,11 @@ import com.example.androiddevchallenge.ui.theme.bkYellow
 import com.example.androiddevchallenge.ui.theme.redSelected
 import com.example.androiddevchallenge.ui.theme.redSelectedBackground
 
-
 class DetailFragment : Fragment() {
 
-
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         return ComposeView(requireContext()).apply {
@@ -74,7 +107,7 @@ class DetailFragment : Fragment() {
                     .background(redSelectedBackground),
                 contentAlignment = Alignment.Center,
 
-                ) {
+            ) {
                 Image(
                     painter = painterResource(id = R.drawable.ic_baseline_favorite_24),
                     contentDescription = null,
@@ -135,7 +168,10 @@ class DetailFragment : Fragment() {
     @Composable
     fun PetGalleryMain(modifier: Modifier) {
         Box(modifier = modifier, contentAlignment = Alignment.CenterEnd) {
-            Canvas(modifier = Modifier.matchParentSize().scale(2f).offset(x = 40.dp), onDraw = { drawCircle(color = bkYellow) })
+            Canvas(
+                modifier = Modifier.matchParentSize().scale(2f).offset(x = 40.dp),
+                onDraw = { drawCircle(color = bkYellow) }
+            )
 
             Image(
                 painter = painterResource(id = R.drawable.dogtest),
@@ -143,8 +179,6 @@ class DetailFragment : Fragment() {
                 modifier = Modifier.scale(1.8f)
             )
         }
-
-
     }
 
     @Composable
@@ -209,9 +243,7 @@ class DetailFragment : Fragment() {
                 }
             }
         }
-
     }
-
 
     @Preview("Light Theme", widthDp = 360, heightDp = 640)
     @Composable
@@ -235,5 +267,4 @@ class DetailFragment : Fragment() {
         R.drawable.pet3,
         R.drawable.pet4,
     )
-
 }
