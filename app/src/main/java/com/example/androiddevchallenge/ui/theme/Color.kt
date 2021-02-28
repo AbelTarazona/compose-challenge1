@@ -30,3 +30,4 @@ val bkRed = Color(0xFFffaa79)
 val bkGreenLight = Color(0xFFb9d89e)
 
 val redSelected = Color(0xFFff5f50)
+val redSelectedBackground = Color(0x4DFF5F50)

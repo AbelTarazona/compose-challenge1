@@ -1,7 +1,6 @@
 package com.example.androiddevchallenge
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -273,6 +272,7 @@ class HomeFragment : Fragment() {
             sex = "Female",
             age = "8 months old",
             distance = 2.5,
+            isFavorite = true,
             backgroundColor = bkYellow
         ),
         Pet(
@@ -281,8 +281,8 @@ class HomeFragment : Fragment() {
             sex = "Male",
             age = "1.5 years old",
             distance = 2.6,
-            isFavorite = true,
-            backgroundColor = bkGreen
+            backgroundColor = bkGreen,
+            img = R.drawable.boston
         ),
         Pet(
             name = "Max",
@@ -290,7 +290,8 @@ class HomeFragment : Fragment() {
             sex = "Male",
             age = "1 year old",
             distance = 2.9,
-            backgroundColor = bkLightBlue
+            backgroundColor = bkLightBlue,
+            img = R.drawable.husky
         ),
         Pet(
             name = "Daisy",
@@ -298,7 +299,8 @@ class HomeFragment : Fragment() {
             sex = "Female",
             age = "7 month old",
             distance = 3.1,
-            backgroundColor = bkRed
+            backgroundColor = bkRed,
+            img = R.drawable.maltese
         ),
         Pet(
             name = "Zoe",
@@ -306,7 +308,8 @@ class HomeFragment : Fragment() {
             sex = "Male",
             age = "7 year old",
             distance = 1.1,
-            backgroundColor = bkGreenLight
+            backgroundColor = bkGreenLight,
+            img = R.drawable.rusell
         ),
     )
 
