@@ -1,4 +1,4 @@
-# Puppy App :rocket:
+# Puppy App :rocket: :trophy:
 
 <!--- Replace <OWNER> with your Github Username and <REPOSITORY> with the name of your repository. -->
 <!--- You can find both of these in the url bar when you open your repository in github. -->
@@ -17,6 +17,9 @@ Thanks to Anurag to make a great design!
 ## :camera_flash: Screenshots
 <!-- You can add more screenshots here if you like -->
 <img src="/results/screenshot_1.png" width="260">&emsp;<img src="/results/screenshot_2.png" width="260">
+
+## :trophy: Jetpack Compose Challenge Winners
+https://youtu.be/9AAmOcgdA2s?t=18
 
 ## License
 ```
